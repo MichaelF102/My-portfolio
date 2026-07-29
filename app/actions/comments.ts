@@ -1,6 +1,7 @@
 'use server';
 
 import { getDb } from '@/lib/db';
+import { validateCommentInput, sanitizeHtml } from '@/lib/filter';
 
 export type Comment = {
   id: number;
@@ -28,11 +29,20 @@ export async function addComment(
   name: string,
   message: string
 ): Promise<{ success: boolean; error?: string }> {
+  // Validate input & check for profanity, XSS tags, length, and spam
+  const validation = validateCommentInput(name, message);
+  if (!validation.isValid) {
+    return { success: false, error: validation.error };
+  }
+
+  const cleanName = sanitizeHtml(name.trim());
+  const cleanMessage = sanitizeHtml(message.trim());
+
   try {
     const sql = getDb();
     await sql`
       INSERT INTO comments (name, message)
-      VALUES (${name}, ${message})
+      VALUES (${cleanName}, ${cleanMessage})
     `;
     return { success: true };
   } catch (error) {
