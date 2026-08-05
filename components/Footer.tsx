@@ -1,17 +1,14 @@
 'use client';
 
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
-import { SiX } from 'react-icons/si';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <FaGithub size={20} />, href: 'https://github.com/Its-amanjha', label: 'GitHub' },
-    { icon: <FaLinkedin size={20} />, href: 'https://linkedin.com/in/its-amanjha', label: 'LinkedIn' },
-    { icon: <FaEnvelope size={20} />, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=amanjhaa.work@gmail.com', label: 'Email' },
-    { icon: <FaWhatsapp size={20} />, href: 'https://wa.me/919217036208', label: 'WhatsApp' },
-    { icon: <SiX size={17} />, href: '#', label: 'X (Twitter)' },
+    { icon: <FaGithub size={20} />, href: 'https://github.com/MichaelF102', label: 'GitHub' },
+    { icon: <FaLinkedin size={20} />, href: 'https://in.linkedin.com/in/michael-fernandes-7a3b6227a', label: 'LinkedIn' },
+    { icon: <FaEnvelope size={20} />, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=michaelferns3210@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -40,7 +37,7 @@ export default function Footer() {
             padding: '0.1rem 0.6rem',
           }}>portfolio</div>
           <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: '0.75rem', color: '#aaa' }}>
-            Aman Kumar Jha © {year}
+            Michael Fernandes © {year}
           </span>
         </div>
 

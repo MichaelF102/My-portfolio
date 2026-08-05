@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SiGithub, SiX } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
 import { FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
-const roles = ['AI Engineer', 'Agentic Driven Systems', 'ML Systems Builder', 'Automation Architect'];
+const roles = ['Data Science', 'Quantitative Analyst', 'Data Engineer', 'Quant Developer', 'AI Engineer'];
 
 function CustomTypewriter({ words, typeSpeed = 70, deleteSpeed = 50, delaySpeed = 2000 }: { words: string[], typeSpeed?: number, deleteSpeed?: number, delaySpeed?: number }) {
   const [currentWordIdx, setCurrentWordIdx] = useState(0);
@@ -60,7 +60,7 @@ const socials = [
   {
     id: 'github',
     label: 'GitHub',
-    href: 'https://github.com/Its-amanjha',
+    href: 'https://github.com/MichaelF102',
     icon: SiGithub,
     color: '#1a1a1a',
     textColor: '#ffffff',
@@ -72,7 +72,7 @@ const socials = [
   {
     id: 'linkedin',
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/its-amanjha',
+    href: 'https://in.linkedin.com/in/michael-fernandes-7a3b6227a',
     icon: FaLinkedin,
     color: '#0077B5',
     textColor: '#ffffff',
@@ -84,7 +84,7 @@ const socials = [
   {
     id: 'email',
     label: 'Email',
-    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=amanjhaa.work@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=michaelferns3210@gmail.com',
     icon: MdEmail,
     color: '#FFE135',
     textColor: '#1a1a1a',
@@ -92,18 +92,6 @@ const socials = [
     idleAnim: { rotate: [22, 28, 22, 16, 22] },
     idleDuration: 6,
     pos: { bottom: '22%', left: '25%' },
-  },
-  {
-    id: 'x',
-    label: 'X',
-    href: '#',
-    icon: SiX,
-    color: '#000000',
-    textColor: '#ffffff',
-    rotate: -14,
-    idleAnim: { y: [0, 10, 0], rotate: [-14, -10, -14, -18, -14] },
-    idleDuration: 3.5,
-    pos: { bottom: '22%', right: '25%' },
   },
 ];
 
@@ -385,7 +373,7 @@ export default function Hero() {
           userSelect: 'none',
         }}
       >
-        ⚡ ML Systems
+        ⚡ Data Engineering
       </motion.div>
 
       <motion.div
@@ -409,7 +397,7 @@ export default function Hero() {
           userSelect: 'none',
         }}
       >
-        🧠 LLMs
+        📈 Quant Finance
       </motion.div>
 
       {/* ───── Main content ───── */}
@@ -442,7 +430,7 @@ export default function Hero() {
             marginBottom: '0.5rem',
           }}
         >
-          Aman
+          Michael
           <br />
           <span style={{
             background: '#FFE135',
@@ -452,7 +440,7 @@ export default function Hero() {
             display: 'inline-block',
             transform: 'rotate(-1deg)',
           }}>
-            Kumar Jha
+            Fernandes
           </span>
         </motion.h1>
 
@@ -504,6 +492,27 @@ export default function Hero() {
             style={{ fontSize: '1rem', padding: '0.9rem 2rem' }}
           >
             📬 Let&apos;s Talk
+          </a>
+          <a
+            href="/Michael_Fernandes_Resume.pdf"
+            download="Michael_Fernandes_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="neo-btn"
+            style={{
+              fontSize: '1rem',
+              padding: '0.9rem 2rem',
+              background: '#FF6B9D',
+              border: '3px solid #1a1a1a',
+              boxShadow: '5px 5px 0 #1a1a1a',
+              color: '#ffffff',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              textDecoration: 'none',
+            }}
+          >
+            📄 Download Resume
           </a>
         </motion.div>
 

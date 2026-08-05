@@ -57,7 +57,7 @@ export default function Experience({ limit }: ExperienceProps) {
             <AnimatePresence initial={false}>
             {items.map((exp, idx) => (
               <motion.div
-                key={exp.title}
+                key={`${exp.company}-${idx}`}
                 initial={{ opacity: 0, x: -30, height: 0 }}
                 animate={{ opacity: 1, x: 0, height: 'auto' }}
                 exit={{ opacity: 0, x: -30, height: 0 }}
@@ -122,7 +122,26 @@ export default function Experience({ limit }: ExperienceProps) {
                     }}>{exp.date}</span>
                   </div>
 
-                  <p style={{ color: '#ccc', fontSize: '0.88rem', lineHeight: 1.7, marginBottom: '0.75rem' }}>{exp.desc}</p>
+                  {exp.points && exp.points.length > 0 ? (
+                    <ul style={{
+                      margin: '0.6rem 0 1rem 1.2rem',
+                      padding: 0,
+                      color: '#ccc',
+                      fontSize: '0.88rem',
+                      lineHeight: 1.6,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '0.35rem'
+                    }}>
+                      {exp.points.map((point, pIdx) => (
+                        <li key={pIdx}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (exp as any).desc ? (
+                    <p style={{ color: '#ccc', fontSize: '0.88rem', lineHeight: 1.7, marginBottom: '0.75rem' }}>
+                      {(exp as any).desc}
+                    </p>
+                  ) : null}
 
                   <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
                     {exp.tech.map((t) => {
@@ -188,6 +207,79 @@ export default function Experience({ limit }: ExperienceProps) {
             </button>
           </div>
         )}
+
+        {/* ── CERTIFICATES SECTION BANNER UNDER EXPERIENCE ── */}
+        <div style={{ marginTop: '3.5rem', paddingLeft: '3rem' }}>
+          <div
+            style={{
+              background: 'rgba(255,255,255,0.04)',
+              border: '3px solid #FFE135',
+              boxShadow: '6px 6px 0 #FFE135',
+              borderRadius: '6px',
+              padding: '1.5rem 1.8rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '1.2rem',
+            }}
+          >
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.3rem' }}>
+                <span style={{ fontSize: '1.3rem' }}>📜</span>
+                <span
+                  style={{
+                    fontFamily: "'IBM Plex Mono', monospace",
+                    fontSize: '0.75rem',
+                    fontWeight: 700,
+                    color: '#FFE135',
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  CERTIFICATIONS &amp; CREDENTIALS
+                </span>
+              </div>
+              <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.25rem', fontWeight: 800, color: '#ffffff', margin: 0 }}>
+                Explore My Verified Technical Certifications
+              </h3>
+              <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: '0.8rem', color: '#aaa', marginTop: '0.3rem', margin: 0 }}>
+                AWS Academy, GeeksforGeeks, IIT Bombay Techfest, &amp; more
+              </p>
+            </div>
+
+            <a
+              href="/certifications"
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontWeight: 800,
+                fontSize: '0.95rem',
+                border: '3px solid #1a1a1a',
+                padding: '0.8rem 1.6rem',
+                color: '#1a1a1a',
+                background: '#FFE135',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                boxShadow: '4px 4px 0 #ffffff',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.6rem',
+                textDecoration: 'none',
+                transition: 'all 0.15s ease',
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.transform = 'translate(-2px, -2px)';
+                (e.currentTarget as HTMLElement).style.boxShadow = '6px 6px 0 #ffffff';
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.transform = 'translate(0, 0)';
+                (e.currentTarget as HTMLElement).style.boxShadow = '4px 4px 0 #ffffff';
+              }}
+            >
+              🎓 Click Here to View Certificates →
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

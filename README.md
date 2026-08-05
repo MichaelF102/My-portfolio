@@ -1,16 +1,12 @@
-# Aman kumar Jha | Portfolio
+# Michael Fernandes | Portfolio
 
-**Live At**: [Amanbuilds.me](https://Amanbuilds.me)
-
-A modern, high-contrast neobrutalist developer portfolio built with Next.js, TypeScript, Framer Motion, and Tailwind CSS. Integrated with a serverless guestbook, dynamic tech writings, and custom asset layouts.
+A modern, high-contrast neobrutalist developer portfolio built with Next.js, TypeScript, Framer Motion, and Tailwind CSS for **Michael Fernandes**.
 
 -----
 
 ## ⚡ Core Philosophy & Focus
 
-I build at the intersection of Artificial Intelligence and software engineering. I design AI-driven systems focused on intelligent automation, real-world execution, and scalable product thinking.
-
-I leverage autonomous coding agents to accelerate development and rapid experimentation, while retaining full ownership of architecture, design, and implementation decisions.
+I solve complex financial and analytical problems by combining quantitative methods, scalable data engineering, and software development. Currently pursuing an **M.Sc. in Big Data Analytics at St. Xavier's College, Mumbai**.
 
 -----
 
@@ -32,7 +28,7 @@ I leverage autonomous coding agents to accelerate development and rapid experime
 3. **Live Guestbook**: Real-time message board using Next.js Server Actions connecting to a serverless Postgres database with automatic client-side polling.
 4. **Scattered Social Cards**: Interactive, physics-inspired scattered cards on desktop and mobile that hover, tilt, and animate on touch.
 5. **Custom Cursor**: Custom canvas mouse tracker with context-aware icon changes when hovering over links and buttons.
-6. **Multi-Channel Social Footer**: Optimized, centered social icon row containing direct links for GitHub, LinkedIn, Email (Gmail web compose redirect), X (Twitter), and WhatsApp.
+6. **Multi-Channel Social Footer**: Optimized, centered social icon row containing direct links for GitHub, LinkedIn, and Email.
 
 ---
 
@@ -40,7 +36,7 @@ I leverage autonomous coding agents to accelerate development and rapid experime
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Its-amanjha/My-portfolio.git
+git clone https://github.com/MichaelF102/My-portfolio.git
 cd My-portfolio
 ```
 

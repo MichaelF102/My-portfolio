@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# helper scripts
+generate_cert_img.py
+generate_resume_pdf.py
+generate_writing_thumbnails.py
+test_send.js
+test_send2.js
+

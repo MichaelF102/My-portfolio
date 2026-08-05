@@ -61,27 +61,33 @@ export default function Navbar() {
 
   const scrollTo = (section: string) => {
     setIsOpen(false);
-    const id = section.toLowerCase();
+    if (section === 'Certificates') {
+      window.location.href = '/certifications';
+      return;
+    }
+
+    let id = section.toLowerCase().replace(/\s+/g, '-');
+    if (id === 'blogs') id = 'technical-content';
 
     if (window.location.pathname !== '/') {
       window.location.href = `/#${id}`;
       return;
     }
 
-    const el = document.getElementById(id);
+    const el = document.getElementById(id) || document.getElementById(section.toLowerCase());
     if (el) {
       const navbarHeight = 72;
-      // About and Contact have a marquee at the top of the section.
-      // Measure its actual height so the section label appears right below navbar.
       let marqueeOffset = 0;
-      if (id === 'about' || id === 'contact') {
+      if (id === 'about' || id === 'contact' || id === 'technical-content') {
         const marquee = el.querySelector('.marquee-wrapper');
         if (marquee) {
-          marqueeOffset = (marquee as HTMLElement).offsetHeight + 64; // +4rem margin
+          marqueeOffset = (marquee as HTMLElement).offsetHeight + 64;
         }
       }
       const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight + marqueeOffset;
       window.scrollTo({ top, behavior: 'smooth' });
+    } else if (section === 'Technical Content') {
+      window.location.href = '/technical-content';
     }
   };
 

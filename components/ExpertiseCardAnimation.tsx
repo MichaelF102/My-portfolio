@@ -739,10 +739,10 @@ function ProgrammaticSEOAnimation({ isDarkMode }: { isDarkMode: boolean }) {
     draw()
 
     const urls = [
-      'aman.dev/seo/ai-workflows-marketing',
-      'aman.dev/seo/multi-agent-developer-leads',
-      'aman.dev/seo/dubai-growth-automation-consult',
-      'aman.dev/seo/programmatic-content-pipelines'
+      'michaelfernandes.dev/analytics/pyspark-etl-pipelines',
+      'michaelfernandes.dev/quant/hmm-stock-regime-detection',
+      'michaelfernandes.dev/data-engineering/iceberg-lakehouse',
+      'michaelfernandes.dev/finance/alphaforage-portfolio-optimizer'
     ]
     let uIdx = 0
     let charIdx = 0

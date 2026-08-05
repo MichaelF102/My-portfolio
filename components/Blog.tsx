@@ -1,16 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { blogPosts } from '@/data/blog';
+import { technicalContentData } from '@/data/portfolio';
 
 export default function Blog() {
-  // Show all posts in the list on the homepage
-  const displayedPosts = blogPosts.slice(0, 3);
+  const displayedItems = technicalContentData.slice(0, 3);
 
   return (
     <section
-      id="blogs"
+      id="technical-content"
       style={{
         padding: '5rem 1.5rem',
         background: '#f5f0e8',
@@ -22,7 +22,7 @@ export default function Blog() {
       <div className="marquee-wrapper" style={{ marginBottom: '4rem' }}>
         <div className="marquee-track">
           {Array(10)
-            .fill('MY BLOG ★ STORIES ★ SYSTEM SPECIFICATIONS ★ ')
+            .fill('TECHNICAL CONTENT ✦ CAROUSELS ✦ DATA ENGINEERING ✦ ARCHITECTURE ✦ ')
             .map((t, i) => (
               <span
                 key={i}
@@ -42,121 +42,175 @@ export default function Blog() {
       <div className="container">
         {/* Section header */}
         <div style={{ marginBottom: '3rem' }}>
-          <span className="neo-section-label">[ 05 — BLOGS ]</span>
+          <span className="neo-section-label">[ 05 — TECHNICAL CONTENT ]</span>
           <h2 className="neo-section-title" style={{ marginTop: '0.5rem', marginBottom: 0 }}>
-            Writings
+            Technical Content &amp; Carousels
           </h2>
-          <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.85rem', color: '#666', marginTop: '0.5rem', margin: 0 }}>
-            Deep dives into AI engineering, autonomous loops, and software architectures.
+          <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.88rem', color: '#555', marginTop: '0.5rem', margin: 0 }}>
+            Visual carousels, architecture deep dives, PySpark guides, and data engineering roadmaps.
           </p>
         </div>
 
-        {/* Bento/Grid of Posts */}
+        {/* Grid of Featured Technical Carousels */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '1.75rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(310px, 1fr))',
+            gap: '2rem',
           }}
         >
-          {displayedPosts.map((post) => (
+          {displayedItems.map((item) => (
             <motion.article
-              key={post.slug}
-              whileHover={{ y: -4, x: -2 }}
+              key={item.id}
+              whileHover={{ y: -5 }}
               style={{
                 background: '#ffffff',
                 border: '3px solid #1a1a1a',
-                boxShadow: '5px 5px 0px #1a1a1a',
-                borderRadius: '4px',
-                padding: '1.5rem',
-                borderLeft: `6px solid ${post.color}`,
+                boxShadow: '6px 6px 0 #1a1a1a',
+                borderRadius: '6px',
+                overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between',
-                minHeight: '260px',
-                transition: 'box-shadow 0.15s ease',
+                transition: 'box-shadow 0.15s ease, transform 0.15s ease',
               }}
             >
-              <div>
-                {/* Meta details */}
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', marginBottom: '0.75rem', flexWrap: 'wrap' }}>
-                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: '0.65rem', color: '#777', fontWeight: 700 }}>
-                    {post.date}
-                  </span>
-                  <span style={{ color: '#ccc', fontSize: '0.65rem' }}>✦</span>
-                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: '0.65rem', color: '#777', fontWeight: 700 }}>
-                    {post.readTime}
-                  </span>
-                </div>
+              {/* Cover Image */}
+              <a
+                href={item.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '210px',
+                  background: '#1a1a1a',
+                  borderBottom: '3px solid #1a1a1a',
+                  display: 'block',
+                }}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'cover' }}
+                />
+              </a>
 
-                {/* Title */}
-                <Link href={`/blogs/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <h3
-                    style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      fontSize: '1.3rem',
-                      fontWeight: 800,
-                      margin: '0 0 0.75rem 0',
-                      lineHeight: 1.25,
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {post.title}
-                  </h3>
-                </Link>
-
-                {/* Excerpt */}
-                <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#444', margin: 0, marginBottom: '1.25rem' }}>
-                  {post.excerpt}
-                </p>
-              </div>
-
-              {/* Bottom Actions */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
-                {/* Tags */}
-                <div style={{ display: 'flex', gap: '0.35rem' }}>
-                  {post.tags.slice(0, 2).map((tag) => (
+              {/* Card Body */}
+              <div style={{ padding: '1.4rem', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', marginBottom: '0.6rem' }}>
                     <span
-                      key={tag}
                       style={{
                         fontFamily: "'IBM Plex Mono', monospace",
-                        fontSize: '0.6rem',
+                        fontSize: '0.7rem',
                         fontWeight: 700,
+                        background: item.color,
+                        color: '#1a1a1a',
+                        padding: '0.15rem 0.5rem',
                         border: '1.5px solid #1a1a1a',
-                        padding: '0.1rem 0.4rem',
                         borderRadius: '2px',
-                        background: '#faf7f0',
                       }}
                     >
-                      {tag}
+                      {item.category}
                     </span>
-                  ))}
+                  </div>
+
+                  <a
+                    href={item.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
+                    <h3
+                      style={{
+                        fontFamily: "'Space Grotesk', sans-serif",
+                        fontSize: '1.15rem',
+                        fontWeight: 800,
+                        margin: '0 0 0.5rem 0',
+                        lineHeight: 1.3,
+                        cursor: 'pointer',
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                  </a>
+
+                  <p style={{ fontSize: '0.85rem', lineHeight: '1.5', color: '#555', margin: '0 0 1rem 0' }}>
+                    {item.description}
+                  </p>
                 </div>
 
-                {/* Read Button */}
-                <Link href={`/blogs/${post.slug}`} style={{ textDecoration: 'none' }}>
-                  <motion.div
-                    whileHover={{ x: 3 }}
+                {/* Card Footer */}
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    paddingTop: '0.75rem',
+                    borderTop: '2px dashed #ddd',
+                  }}
+                >
+                  <div style={{ display: 'flex', gap: '0.35rem', flexWrap: 'wrap' }}>
+                    {item.tags.slice(0, 2).map((tag) => (
+                      <span
+                        key={tag}
+                        style={{
+                          fontFamily: "'IBM Plex Mono', monospace",
+                          fontSize: '0.65rem',
+                          fontWeight: 700,
+                          color: '#555',
+                        }}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={item.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '0.25rem',
                       fontFamily: "'IBM Plex Mono', monospace",
-                      fontSize: '0.78rem',
+                      fontSize: '0.75rem',
                       fontWeight: 700,
                       color: '#1a1a1a',
-                      cursor: 'pointer',
+                      textDecoration: 'underline',
                     }}
                   >
-                    <span>Read</span>
-                    <svg width="10" height="10" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-                    </svg>
-                  </motion.div>
-                </Link>
+                    Read PDF →
+                  </a>
+                </div>
               </div>
             </motion.article>
           ))}
+        </div>
+
+        {/* View All 25 Carousels Button below cards grid */}
+        <div style={{ marginTop: '3rem', textAlign: 'center' }}>
+          <Link
+            href="/technical-content"
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontWeight: 800,
+              fontSize: '1rem',
+              border: '3px solid #1a1a1a',
+              padding: '0.85rem 2.2rem',
+              color: '#1a1a1a',
+              background: '#FFE135',
+              borderRadius: '4px',
+              boxShadow: '5px 5px 0 #1a1a1a',
+              textDecoration: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.6rem',
+              transition: 'all 0.15s ease',
+            }}
+          >
+            📚 View All 25 Carousels →
+          </Link>
         </div>
       </div>
     </section>
