@@ -1,6 +1,5 @@
 # Michael Fernandes | Portfolio
 
-A modern, high-contrast neobrutalist developer portfolio built with Next.js, TypeScript, Framer Motion, and Tailwind CSS for **Michael Fernandes**.
 
 -----
 
