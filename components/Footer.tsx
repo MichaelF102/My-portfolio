@@ -27,15 +27,29 @@ export default function Footer() {
       }}>
         {/* Left Column: Brand Info */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', flex: '1 1 200px' }}>
-          <div style={{
-            fontFamily: "'Bebas Neue', sans-serif",
-            fontSize: '1.4rem',
-            letterSpacing: '0.1em',
-            background: '#FFE135',
-            color: '#1a1a1a',
-            border: '2.5px solid #FFE135',
-            padding: '0.1rem 0.6rem',
-          }}>portfolio</div>
+          <div
+            style={{
+              cursor: 'pointer',
+              userSelect: 'none',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <img
+              src="/images/logo.jpg"
+              alt="Logo"
+              style={{
+                height: '38px',
+                width: 'auto',
+                border: '2.5px solid #FFE135',
+                boxShadow: '3px 3px 0 #FFE135',
+                borderRadius: '4px',
+                display: 'block',
+                objectFit: 'contain',
+              }}
+            />
+          </div>
           <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: '0.75rem', color: '#aaa' }}>
             Michael Fernandes © {year}
           </span>

@@ -116,19 +116,26 @@ export default function Navbar() {
             transition={{ duration: 0.6, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ rotate: -2, scale: 1.05 }}
             style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: '1.6rem',
-              letterSpacing: '0.1em',
-              background: '#FFE135',
-              border: '3px solid #1a1a1a',
-              boxShadow: '4px 4px 0 #1a1a1a',
-              padding: '0.2rem 0.8rem',
               cursor: 'pointer',
               userSelect: 'none',
+              display: 'flex',
+              alignItems: 'center',
             }}
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            Portfolio
+            <img
+              src="/images/logo.jpg"
+              alt="Logo"
+              style={{
+                height: '42px',
+                width: 'auto',
+                border: '3px solid #1a1a1a',
+                boxShadow: '4px 4px 0 #1a1a1a',
+                borderRadius: '4px',
+                display: 'block',
+                objectFit: 'contain',
+              }}
+            />
           </motion.div>
 
           {/* Desktop Nav — Fade + Slide Down (150ms timeline) */}
