@@ -1,6 +1,5 @@
 # Michael Fernandes | Portfolio
 
-
 -----
 
 ## ⚡ Core Philosophy & Focus
