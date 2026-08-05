@@ -96,7 +96,7 @@ export default function Navbar() {
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         style={{
           position: 'fixed',
           top: 0,
@@ -109,8 +109,11 @@ export default function Navbar() {
         }}
       >
         <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1rem 1.5rem' }}>
-          {/* Logo */}
+          {/* Logo — Slide from Top (0ms timeline) */}
           <motion.div
+            initial={{ y: -60, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ rotate: -2, scale: 1.05 }}
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -128,8 +131,14 @@ export default function Navbar() {
             Portfolio
           </motion.div>
 
-          {/* Desktop Nav */}
-          <div style={{ display: 'flex', gap: '0.5rem' }} className="nav-desktop">
+          {/* Desktop Nav — Fade + Slide Down (150ms timeline) */}
+          <motion.div
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
+            style={{ display: 'flex', gap: '0.5rem' }}
+            className="nav-desktop"
+          >
             {navItems.map((item) => (
               <motion.button
                 key={item}
@@ -153,7 +162,7 @@ export default function Navbar() {
                 {item}
               </motion.button>
             ))}
-          </div>
+          </motion.div>
 
           {/* Hamburger */}
           <button
