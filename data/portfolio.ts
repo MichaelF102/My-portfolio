@@ -371,7 +371,7 @@ export const Project: ProjectItem[] = [
     github: "https://github.com/MichaelF102/FIFA_Analytics",
   },
   {
-    id: 18,
+    id: 19,
     name: "AML Detection and Analysis",
     description:
       "Anti Money Laundering Detection and Analysis using ML and Graph Networks",
@@ -400,6 +400,7 @@ const categoryMapping: Record<number, string> = {
   16: "Data Analytics",
   17: "Data Science",
   18: "Data Analytics",
+  19: "Data Science",
 };
 
 const colorPalette = ["#FFE135", "#4ECDC4", "#FF6B9D", "#95E06C", "#C77DFF", "#FF6B35"];
