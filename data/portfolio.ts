@@ -370,6 +370,15 @@ export const Project: ProjectItem[] = [
     demo: "https://fifa2026analytics.streamlit.app/",
     github: "https://github.com/MichaelF102/FIFA_Analytics",
   },
+  {
+    id: 18,
+    name: "AML Detection and Analysis",
+    description:
+      "Anti Money Laundering Detection and Analysis using ML and Graph Networks",
+    tags: ["Python", "networkx", "ml", "optuna", "streamlit"],
+    demo: "https://amlanalysis.streamlit.app/",
+    github: "https://github.com/MichaelF102/AML2",
+  },
 ];
 
 const categoryMapping: Record<number, string> = {

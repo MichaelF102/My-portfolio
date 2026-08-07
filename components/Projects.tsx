@@ -261,7 +261,7 @@ export default function Projects() {
               transition: 'all 0.15s ease',
             }}
           >
-            🚀 View All {projectsData.length}  Projects &amp; Demos →
+            🚀 View All {projectsData.length} Projects &amp; Demos →
           </Link>
         </div>
       </div>
