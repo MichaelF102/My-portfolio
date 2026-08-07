@@ -343,6 +343,33 @@ export const Project: ProjectItem[] = [
     demo: "https://hmmregimedetection.streamlit.app/",
     github: "https://github.com/MichaelF102/HMM-Regime-Detection",
   },
+  {
+    id: 16,
+    name: "AI Model Analytics Dashboard",
+    description:
+      "AI Model Analytics Dashboard: Provides comprehensive performance tracking, parameters and comparative evaluation for AI/ML models.",
+    tags: ["Python", "plotly", "pandas", "numpy", "streamlit"],
+    demo: "https://aimodelanalytics.streamlit.app/",
+    github: "https://github.com/MichaelF102/AI_Model_Analytics",
+  },
+  {
+    id: 17,
+    name: "Customer Churn Prediction",
+    description:
+      "Customer Churn Prediction:predict which customers are likely to churn and identify the key factors driving churn",
+    tags: ["Python", "xgboost", "scikit-learn", "plotly", "streamlit"],
+    demo: "https://telcocustomerchurnpred.streamlit.app/",
+    github: "https://github.com/MichaelF102/CustomerChurnPrediction",
+  },
+  {
+    id: 18,
+    name: "FIFA World Cup Performance Analytics Dashboard ",
+    description:
+      "FIFA World Cup Performance Analytics Dashboard ",
+    tags: ["Python", "numpy", "plotly", "pandas", "streamlit"],
+    demo: "https://fifa2026analytics.streamlit.app/",
+    github: "https://github.com/MichaelF102/FIFA_Analytics",
+  },
 ];
 
 const categoryMapping: Record<number, string> = {
@@ -361,6 +388,9 @@ const categoryMapping: Record<number, string> = {
   13: "Data Science",
   14: "Data Engineering",
   15: "Quant Finance",
+  16: "Data Analytics",
+  17: "Data Science",
+  18: "Data Analytics",
 };
 
 const colorPalette = ["#FFE135", "#4ECDC4", "#FF6B9D", "#95E06C", "#C77DFF", "#FF6B35"];
