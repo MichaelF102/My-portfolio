@@ -379,6 +379,15 @@ export const Project: ProjectItem[] = [
     demo: "https://amlanalysis.streamlit.app/",
     github: "https://github.com/MichaelF102/AML2",
   },
+  {
+    id: 20,
+    name: "Fundamental Analysis Dashboard",
+    description:
+      "Fundamental Analysis and Stock Valuation Dashboard for Indian and US Markets using yfinance and Screener.in",
+    tags: ["Python", "yfinance", "bs4", "pandas", "streamlit"],
+    demo: "https://stockmarketfundamentals.streamlit.app/",
+    github: "https://github.com/MichaelF102/Stock_Fundamentals",
+  },
 ];
 
 const categoryMapping: Record<number, string> = {
@@ -401,6 +410,7 @@ const categoryMapping: Record<number, string> = {
   17: "Data Science",
   18: "Data Analytics",
   19: "Data Science",
+  20: "Data Analytics",
 };
 
 const colorPalette = ["#FFE135", "#4ECDC4", "#FF6B9D", "#95E06C", "#C77DFF", "#FF6B35"];
