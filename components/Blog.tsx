@@ -1,12 +1,16 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { technicalContentData } from '@/data/portfolio';
+import { technicalContentData, quantContentData } from '@/data/portfolio';
 
 export default function Blog() {
-  const displayedItems = technicalContentData.slice(0, 3);
+  const [mainSection, setMainSection] = useState<'quant' | 'de'>('quant');
+
+  const currentDataset = mainSection === 'quant' ? quantContentData : technicalContentData;
+  const displayedItems = currentDataset.slice(0, 3);
 
   return (
     <section
@@ -22,7 +26,7 @@ export default function Blog() {
       <div className="marquee-wrapper" style={{ marginBottom: '4rem' }}>
         <div className="marquee-track">
           {Array(10)
-            .fill('TECHNICAL CONTENT ✦ CAROUSELS ✦ DATA ENGINEERING ✦ ARCHITECTURE ✦ ')
+            .fill('TECHNICAL CONTENT ✦ QUANT FINANCE ✦ DATA ENGINEERING ✦ ARCHITECTURE ✦ ')
             .map((t, i) => (
               <span
                 key={i}
@@ -41,14 +45,73 @@ export default function Blog() {
 
       <div className="container">
         {/* Section header */}
-        <div style={{ marginBottom: '3rem' }}>
+        <div style={{ marginBottom: '2rem' }}>
           <span className="neo-section-label">[ 05 — TECHNICAL CONTENT ]</span>
           <h2 className="neo-section-title" style={{ marginTop: '0.5rem', marginBottom: 0 }}>
             Technical Content &amp; Carousels
           </h2>
           <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.88rem', color: '#555', marginTop: '0.5rem', margin: 0 }}>
-            Visual carousels, architecture deep dives, PySpark guides, and data engineering roadmaps.
+            {mainSection === 'quant'
+              ? 'Quantitative finance guides, option pricing models, HFT architecture, and volatility forecasting.'
+              : 'Visual carousels, architecture deep dives, PySpark guides, and data engineering roadmaps.'}
           </p>
+        </div>
+
+        {/* Primary Two Button Selection: Quant Finance vs Data Engineering */}
+        <div
+          style={{
+            display: 'flex',
+            gap: '1rem',
+            marginBottom: '2.5rem',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+          }}
+        >
+          <button
+            onClick={() => setMainSection('quant')}
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontWeight: 800,
+              fontSize: '1.05rem',
+              letterSpacing: '0.02em',
+              padding: '0.75rem 1.75rem',
+              background: mainSection === 'quant' ? '#FFE135' : '#ffffff',
+              color: '#1a1a1a',
+              border: '3.5px solid #1a1a1a',
+              boxShadow: mainSection === 'quant' ? '5px 5px 0 #1a1a1a' : '3px 3px 0 #1a1a1a',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              transition: 'all 0.15s ease',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+            }}
+          >
+            📊 Quant Finance ({quantContentData.length})
+          </button>
+
+          <button
+            onClick={() => setMainSection('de')}
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontWeight: 800,
+              fontSize: '1.05rem',
+              letterSpacing: '0.02em',
+              padding: '0.75rem 1.75rem',
+              background: mainSection === 'de' ? '#4ECDC4' : '#ffffff',
+              color: '#1a1a1a',
+              border: '3.5px solid #1a1a1a',
+              boxShadow: mainSection === 'de' ? '5px 5px 0 #1a1a1a' : '3px 3px 0 #1a1a1a',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              transition: 'all 0.15s ease',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+            }}
+          >
+            ⚙️ Data Engineering ({technicalContentData.length})
+          </button>
         </div>
 
         {/* Grid of Featured Technical Carousels */}
@@ -209,7 +272,7 @@ export default function Blog() {
               transition: 'all 0.15s ease',
             }}
           >
-            📚 View All 25 Carousels →
+            📚 View All Carousels →
           </Link>
         </div>
       </div>

@@ -909,3 +909,337 @@ export const technicalContentData: TechnicalContentItem[] = [
     color: "#FF6B9D"
   }
 ];
+
+export const quantContentData: TechnicalContentItem[] = [
+  {
+    id: "alpha-discovery",
+    title: "Alpha Discovery & Quantitative Signals",
+    description: "Systematic framework for discovering, validating, and backtesting quantitative alpha signals in equity markets.",
+    category: "Quant Research",
+    pdfUrl: "/quant_content/Alpha_Discovery.pdf",
+    image: "/images/quant_content/Alpha_Discovery.png",
+    tags: ["#QuantAlpha", "#SignalDiscovery", "#Backtesting"],
+    date: "2026",
+    color: "#FFE135"
+  },
+  {
+    id: "black-scholes",
+    title: "Black-Scholes-Merton Option Pricing Model",
+    description: "Mathematical derivation, assumptions, partial differential equations (PDEs), and practical applications of the Black-Scholes model.",
+    category: "Options & Derivatives",
+    pdfUrl: "/quant_content/Black_Scholes.pdf",
+    image: "/images/quant_content/Black_Scholes.png",
+    tags: ["#OptionsPricing", "#BlackScholes", "#FinancialEngineering"],
+    date: "2026",
+    color: "#4ECDC4"
+  },
+  {
+    id: "greeks",
+    title: "The Greek Compass: Derivatives Risk Analytics",
+    description: "Comprehensive guide to Delta, Gamma, Vega, Theta, and Rho sensitivity metrics for option portfolio hedging.",
+    category: "Options & Derivatives",
+    pdfUrl: "/quant_content/Greeks.pdf",
+    image: "/images/quant_content/Greeks.png",
+    tags: ["#OptionGreeks", "#RiskManagement", "#Hedging"],
+    date: "2026",
+    color: "#FF6B9D"
+  },
+  {
+    id: "india-quant",
+    title: "Quantitative Finance & Trading Landscape in India",
+    description: "In-depth overview of algorithmic trading, market structures, SEBI regulatory frameworks, and quant careers in India.",
+    category: "Quant Ecosystem",
+    pdfUrl: "/quant_content/India_Quant.pdf",
+    image: "/images/quant_content/India_Quant.png",
+    tags: ["#IndianMarkets", "#AlgoTrading", "#MarketStructure"],
+    date: "2026",
+    color: "#95E06C"
+  },
+  {
+    id: "mcs-types",
+    title: "Monte Carlo Simulation Techniques & Variance Reduction",
+    description: "Types of Monte Carlo simulations, antithetic variates, control variates, and importance sampling in financial modeling.",
+    category: "Stochastic & Risk",
+    pdfUrl: "/quant_content/MCS_Types.pdf",
+    image: "/images/quant_content/MCS_Types.png",
+    tags: ["#MonteCarlo", "#VarianceReduction", "#Simulation"],
+    date: "2026",
+    color: "#C77DFF"
+  },
+  {
+    id: "market-microstructure",
+    title: "Market Microstructure & Order Book Dynamics",
+    description: "Limit order books, bid-ask spread dynamics, market impact models, order flow toxicity, and liquidity metrics.",
+    category: "HFT & Microstructure",
+    pdfUrl: "/quant_content/Market_Microstructure.pdf",
+    image: "/images/quant_content/Market_Microstructure.png",
+    tags: ["#MarketMicrostructure", "#OrderBook", "#Liquidity"],
+    date: "2026",
+    color: "#FF6B35"
+  },
+  {
+    id: "mean-reversion",
+    title: "Statistical Arbitrage & Mean Reversion Strategies",
+    description: "Pairs trading, Johansen cointegration, Augmented Dickey-Fuller (ADF) tests, and Ornstein-Uhlenbeck stochastic processes.",
+    category: "Trading Strategies",
+    pdfUrl: "/quant_content/Mean_Reversion.pdf",
+    image: "/images/quant_content/Mean_Reversion.png",
+    tags: ["#StatArb", "#PairsTrading", "#Cointegration"],
+    date: "2026",
+    color: "#38B6FF"
+  },
+  {
+    id: "modern-quant-ecosystem",
+    title: "The Modern Quantitative Finance Ecosystem",
+    description: "Complete tech stack, data providers, execution venues, cloud infrastructure, and mathematical toolkits for modern quants.",
+    category: "Quant Ecosystem",
+    pdfUrl: "/quant_content/Modern_Quant_Ecosystem.pdf",
+    image: "/images/quant_content/Modern_Quant_Ecosystem.png",
+    tags: ["#QuantTech", "#FinTech", "#SystematicTrading"],
+    date: "2026",
+    color: "#FFE135"
+  },
+  {
+    id: "monte-carlo",
+    title: "Monte Carlo Simulations in Quantitative Finance",
+    description: "Simulating geometric Brownian motion (GBM), path-dependent options, and value-at-risk (VaR) estimation.",
+    category: "Stochastic & Risk",
+    pdfUrl: "/quant_content/Monte_Carlo.pdf",
+    image: "/images/quant_content/Monte_Carlo.png",
+    tags: ["#MonteCarlo", "#StochasticModeling", "#RiskAnalytics"],
+    date: "2026",
+    color: "#4ECDC4"
+  },
+  {
+    id: "ocaml-quant",
+    title: "OCaml in High-Frequency & Quantitative Finance",
+    description: "Why top quant funds like Jane Street leverage functional programming, static typing, and high performance in OCaml.",
+    category: "Quant Tech & C++",
+    pdfUrl: "/quant_content/OCaml.pdf",
+    image: "/images/quant_content/OCaml.png",
+    tags: ["#OCaml", "#FunctionalProgramming", "#HFT"],
+    date: "2026",
+    color: "#FF6B9D"
+  },
+  {
+    id: "quant-order-types",
+    title: "Quantitative Trading Order Types & Execution Algorithms",
+    description: "Limit, Market, Iceberg, TWAP, VWAP, and Implementation Shortfall execution algorithms.",
+    category: "HFT & Microstructure",
+    pdfUrl: "/quant_content/Quant-Order_Types.pdf",
+    image: "/images/quant_content/Quant-Order_Types.png",
+    tags: ["#OrderTypes", "#AlgorithmicExecution", "#VWAP"],
+    date: "2026",
+    color: "#95E06C"
+  },
+  {
+    id: "quant-researcher",
+    title: "Complete Guide to Becoming a Quantitative Researcher",
+    description: "Core skill matrix, math fundamentals, portfolio management, interview preparation, and research methodology.",
+    category: "Career & Guides",
+    pdfUrl: "/quant_content/Quant-researcher.pdf",
+    image: "/images/quant_content/Quant-researcher.png",
+    tags: ["#QuantResearcher", "#CareerGuide", "#QuantResearch"],
+    date: "2026",
+    color: "#C77DFF"
+  },
+  {
+    id: "quant-algo-engine",
+    title: "Building a Production-Grade Algorithmic Trading Engine",
+    description: "Architecture design for event-driven backtesting, real-time market data ingestion, order routing, and risk checks.",
+    category: "Trading Strategies",
+    pdfUrl: "/quant_content/Quant_AlgorithmicTrading_Engine.pdf",
+    image: "/images/quant_content/Quant_AlgorithmicTrading_Engine.png",
+    tags: ["#AlgoTrading", "#SystemDesign", "#Backtester"],
+    date: "2026",
+    color: "#FF6B35"
+  },
+  {
+    id: "quant-alpha",
+    title: "Quant Alpha Factors & Portfolio Construction",
+    description: "Cross-sectional factor modeling, momentum, value, quality, volatility factors, and risk-budgeted portfolio construction.",
+    category: "Portfolio & Alpha",
+    pdfUrl: "/quant_content/Quant_Alpha.pdf",
+    image: "/images/quant_content/Quant_Alpha.png",
+    tags: ["#AlphaFactors", "#PortfolioOptimization", "#FactorInvesting"],
+    date: "2026",
+    color: "#38B6FF"
+  },
+  {
+    id: "quant-analyst",
+    title: "Complete Guide to Quantitative Analyst Roles & Skills",
+    description: "Detailed roadmap covering desk quants, risk quants, model validation, financial engineering, and essential math.",
+    category: "Career & Guides",
+    pdfUrl: "/quant_content/Quant_Analyst.pdf",
+    image: "/images/quant_content/Quant_Analyst.png",
+    tags: ["#QuantAnalyst", "#FinancialEngineering", "#CareerGuide"],
+    date: "2026",
+    color: "#FFE135"
+  },
+  {
+    id: "quant-cpp",
+    title: "C++ for Quantitative Finance & High-Frequency Trading",
+    description: "Low-latency C++ techniques, memory management, template metaprogramming, cache optimization, and lock-free queues.",
+    category: "Quant Tech & C++",
+    pdfUrl: "/quant_content/Quant_Cpp.pdf",
+    image: "/images/quant_content/Quant_Cpp.png",
+    tags: ["#Cpp", "#LowLatency", "#HFT"],
+    date: "2026",
+    color: "#4ECDC4"
+  },
+  {
+    id: "quant-developer",
+    title: "The Quantitative Developer Skill Tree & Architecture",
+    description: "Designing trading engines, data pipelines, low-latency execution systems, and system design patterns for quant devs.",
+    category: "Career & Guides",
+    pdfUrl: "/quant_content/Quant_Developer.pdf",
+    image: "/images/quant_content/Quant_Developer.png",
+    tags: ["#QuantDeveloper", "#SystemDesign", "#SoftwareEngineering"],
+    date: "2026",
+    color: "#FF6B9D"
+  },
+  {
+    id: "quant-hft",
+    title: "High-Frequency Trading (HFT): Architecture & Microsecond Latency",
+    description: "FPGA acceleration, kernel bypass (Solarflare), market data parsing (ITCH/OUCH), and co-location dynamics.",
+    category: "HFT & Microstructure",
+    pdfUrl: "/quant_content/Quant_HFT.pdf",
+    image: "/images/quant_content/Quant_HFT.png",
+    tags: ["#HFT", "#LowLatency", "#KernelBypass"],
+    date: "2026",
+    color: "#95E06C"
+  },
+  {
+    id: "quant-jane",
+    title: "Jane Street & Prop Trading Firm Preparation Guide",
+    description: "Mental math, probability puzzles, market making games, and interview strategy for top prop trading firms.",
+    category: "Career & Guides",
+    pdfUrl: "/quant_content/Quant_Jane.pdf",
+    image: "/images/quant_content/Quant_Jane.png",
+    tags: ["#PropTrading", "#JaneStreet", "#Brainteasers"],
+    date: "2026",
+    color: "#C77DFF"
+  },
+  {
+    id: "quant-lib",
+    title: "QuantLib Masterclass: Financial Engineering in Python & C++",
+    description: "Hands-on guide to QuantLib yield curves, interest rate swap pricing, bond analytics, and option valuation engines.",
+    category: "Quant Tech & C++",
+    pdfUrl: "/quant_content/Quant_Lib.pdf",
+    image: "/images/quant_content/Quant_Lib.png",
+    tags: ["#QuantLib", "#FinancialEngineering", "#YieldCurves"],
+    date: "2026",
+    color: "#FF6B35"
+  },
+  {
+    id: "quant-options-pm",
+    title: "Options Portfolio Management & Volatility Surface Modeling",
+    description: "Managing option books, volatility smile/skew dynamics, delta-neutral hedging, and variance swap trading.",
+    category: "Options & Derivatives",
+    pdfUrl: "/quant_content/Quant_OptionsPM.pdf",
+    image: "/images/quant_content/Quant_OptionsPM.png",
+    tags: ["#OptionsPM", "#VolatilitySurface", "#VolTrading"],
+    date: "2026",
+    color: "#38B6FF"
+  },
+  {
+    id: "quant-python",
+    title: "Python for Quantitative Finance & Vectorized Backtesting",
+    description: "Leveraging NumPy, Pandas, SciPy, Numba, and VectorBT for ultra-fast vectorized backtesting and quantitative analytics.",
+    category: "Quant Tech & C++",
+    pdfUrl: "/quant_content/Quant_Python.pdf",
+    image: "/images/quant_content/Quant_Python.png",
+    tags: ["#Python", "#Vectorization", "#Backtesting"],
+    date: "2026",
+    color: "#FFE135"
+  },
+  {
+    id: "quant-stoch-vol",
+    title: "Stochastic Volatility Models: Heston & SABR",
+    description: "Calibration of Heston stochastic volatility model and SABR volatility smile formulation for exotic option pricing.",
+    category: "Stochastic & Risk",
+    pdfUrl: "/quant_content/Quant_StockhastiVM.pdf",
+    image: "/images/quant_content/Quant_StockhastiVM.png",
+    tags: ["#HestonModel", "#StochasticVolatility", "#SABR"],
+    date: "2026",
+    color: "#4ECDC4"
+  },
+  {
+    id: "quant-trader",
+    title: "Complete Guide to Quantitative Trading Strategies",
+    description: "Developing, testing, and executing systematic trading models across asset classes with risk controls.",
+    category: "Trading Strategies",
+    pdfUrl: "/quant_content/Quant_trader.pdf",
+    image: "/images/quant_content/Quant_trader.png",
+    tags: ["#QuantTrader", "#SystematicTrading", "#RiskManagement"],
+    date: "2026",
+    color: "#FF6B9D"
+  },
+  {
+    id: "rl-quant",
+    title: "Reinforcement Learning in Algorithmic Trading & Execution",
+    description: "Deep Q-Networks (DQN), PPO, and Actor-Critic models for optimal order execution and automated portfolio rebalancing.",
+    category: "Trading Strategies",
+    pdfUrl: "/quant_content/RL_Quant.pdf",
+    image: "/images/quant_content/RL_Quant.png",
+    tags: ["#ReinforcementLearning", "#AIinFinance", "#RLTrading"],
+    date: "2026",
+    color: "#95E06C"
+  },
+  {
+    id: "sharpe-ratio",
+    title: "Sharpe Ratio, Sortino Ratio & Risk-Adjusted Metrics",
+    description: "Mathematical nuances, probabilistic Sharpe ratio (PSR), deflated Sharpe ratio (DSR), and benchmarking performance.",
+    category: "Portfolio & Alpha",
+    pdfUrl: "/quant_content/Sharpe_Ratio.pdf",
+    image: "/images/quant_content/Sharpe_Ratio.png",
+    tags: ["#SharpeRatio", "#RiskAdjustedReturn", "#Performance"],
+    date: "2026",
+    color: "#C77DFF"
+  },
+  {
+    id: "time-series-quant",
+    title: "Time Series Analysis for Quantitative Trading",
+    description: "ARIMA, GARCH, Kalman Filters, cointegration, stationarity tests, and spectral analysis for financial data.",
+    category: "Quant Research",
+    pdfUrl: "/quant_content/Time_Series_Quant.pdf",
+    image: "/images/quant_content/Time_Series_Quant.png",
+    tags: ["#TimeSeries", "#GARCH", "#KalmanFilter"],
+    date: "2026",
+    color: "#FF6B35"
+  },
+  {
+    id: "top15-rp",
+    title: "Top 15 Milestone Research Papers in Quantitative Finance",
+    description: "Summaries of landmark papers by Black-Scholes, Markowitz, Fama-French, Merton, and modern quantitative literature.",
+    category: "Quant Research",
+    pdfUrl: "/quant_content/Top15_RP.pdf",
+    image: "/images/quant_content/Top15_RP.png",
+    tags: ["#ResearchPapers", "#ClassicQuant", "#Literature"],
+    date: "2026",
+    color: "#38B6FF"
+  },
+  {
+    id: "gauss-markov",
+    title: "Gauss-Markov Theorem & OLS in Financial Econometrics",
+    description: "BLUE estimators, homoscedasticity, multicollinearity, autocorrelation, and robust regression in finance.",
+    category: "Quant Research",
+    pdfUrl: "/quant_content/gauss_markov.pdf",
+    image: "/images/quant_content/gauss_markov.png",
+    tags: ["#GaussMarkov", "#Econometrics", "#OLS"],
+    date: "2026",
+    color: "#FFE135"
+  },
+  {
+    id: "yfinance-guide",
+    title: "Automated Financial Data Extraction with yfinance & Python",
+    description: "Fetching real-time & historical market data, fundamental metrics, option chains, and corporate actions.",
+    category: "Quant Tech & C++",
+    pdfUrl: "/quant_content/yfinance.pdf",
+    image: "/images/quant_content/yfinance.png",
+    tags: ["#yfinance", "#MarketData", "#PythonFinance"],
+    date: "2026",
+    color: "#4ECDC4"
+  }
+];
+

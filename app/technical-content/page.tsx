@@ -4,12 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { technicalContentData } from '@/data/portfolio';
+import { technicalContentData, quantContentData } from '@/data/portfolio';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
-const TABS = [
+const DE_TABS = [
   'All',
   'Data Engineering',
   'PySpark & Spark',
@@ -19,13 +19,30 @@ const TABS = [
   'Quantitative & Quantum',
 ];
 
+const QUANT_TABS = [
+  'All',
+  'Quant Research',
+  'Options & Derivatives',
+  'Stochastic & Risk',
+  'HFT & Microstructure',
+  'Trading Strategies',
+  'Quant Tech & C++',
+  'Portfolio & Alpha',
+  'Career & Guides',
+  'Quant Ecosystem',
+];
+
 export default function TechnicalContentPage() {
+  const [mainSection, setMainSection] = useState<'quant' | 'de'>('quant');
   const [activeTab, setActiveTab] = useState('All');
+
+  const currentDataset = mainSection === 'quant' ? quantContentData : technicalContentData;
+  const currentTabs = mainSection === 'quant' ? QUANT_TABS : DE_TABS;
 
   const filteredItems =
     activeTab === 'All'
-      ? technicalContentData
-      : technicalContentData.filter((item) => item.category === activeTab);
+      ? currentDataset
+      : currentDataset.filter((item) => item.category === activeTab);
 
   return (
     <div style={{ minHeight: '100vh', background: '#f5f0e8', color: '#1a1a1a', display: 'flex', flexDirection: 'column' }}>
@@ -34,7 +51,7 @@ export default function TechnicalContentPage() {
       <main style={{ flex: 1, padding: '7rem 1.5rem 5rem' }}>
         <div className="container">
           {/* Header row with back link */}
-          <div style={{ marginBottom: '2.5rem' }}>
+          <div style={{ marginBottom: '2rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '1rem' }}>
               <span className="neo-section-label">[ TECHNICAL CAROUSELS &amp; WRITINGS ]</span>
               <Link
@@ -73,11 +90,76 @@ export default function TechnicalContentPage() {
                 lineHeight: 1.6,
               }}
             >
-              Visual architecture carousels, PySpark optimization guides, SQL masterclasses, and data engineering roadmaps. Click any carousel card to read full PDF guide.
+              {mainSection === 'quant'
+                ? 'Quantitative finance guides, options pricing, stochastic volatility modeling, high-frequency trading architecture, and statistical arbitrage masterclasses. Click any carousel card to read full PDF guide.'
+                : 'Visual architecture carousels, PySpark optimization guides, SQL masterclasses, and data engineering roadmaps. Click any carousel card to read full PDF guide.'}
             </p>
           </div>
 
-          {/* Filter Tabs matching Neo-Brutalist design */}
+          {/* Primary Two Button Selection: Quant Finance vs Data Engineering */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '1rem',
+              marginBottom: '2rem',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+            }}
+          >
+            <button
+              onClick={() => {
+                setMainSection('quant');
+                setActiveTab('All');
+              }}
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontWeight: 800,
+                fontSize: '1.05rem',
+                letterSpacing: '0.02em',
+                padding: '0.75rem 1.75rem',
+                background: mainSection === 'quant' ? '#FFE135' : '#ffffff',
+                color: '#1a1a1a',
+                border: '3.5px solid #1a1a1a',
+                boxShadow: mainSection === 'quant' ? '5px 5px 0 #1a1a1a' : '3px 3px 0 #1a1a1a',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                transition: 'all 0.15s ease',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+              }}
+            >
+              📊 Quant Finance ({quantContentData.length})
+            </button>
+
+            <button
+              onClick={() => {
+                setMainSection('de');
+                setActiveTab('All');
+              }}
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontWeight: 800,
+                fontSize: '1.05rem',
+                letterSpacing: '0.02em',
+                padding: '0.75rem 1.75rem',
+                background: mainSection === 'de' ? '#4ECDC4' : '#ffffff',
+                color: '#1a1a1a',
+                border: '3.5px solid #1a1a1a',
+                boxShadow: mainSection === 'de' ? '5px 5px 0 #1a1a1a' : '3px 3px 0 #1a1a1a',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                transition: 'all 0.15s ease',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+              }}
+            >
+              ⚙️ Data Engineering ({technicalContentData.length})
+            </button>
+          </div>
+
+          {/* Filter Sub-Tabs matching Neo-Brutalist design */}
           <div
             style={{
               display: 'flex',
@@ -87,7 +169,7 @@ export default function TechnicalContentPage() {
               alignItems: 'center',
             }}
           >
-            {TABS.map((tab) => {
+            {currentTabs.map((tab) => {
               const isActive = activeTab === tab;
               return (
                 <button
