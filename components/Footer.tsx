@@ -34,7 +34,13 @@ export default function Footer() {
               display: 'flex',
               alignItems: 'center',
             }}
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => {
+              if (window.location.pathname !== '/') {
+                window.location.href = '/';
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
           >
             <img
               src="/images/logo.jpg"
