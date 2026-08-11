@@ -399,9 +399,9 @@ export const Project: ProjectItem[] = [
   },
   {
     id: 22,
-    name: "",
+    name: "Benchmarking Single Node vs Distributed Processing",
     description:
-      "Benchmarking Single Node vs Distributed Processing",
+      "Comparing Pyspark on training Rnadom Forest on both single node and distributed processing",
     tags: ["Python", "Machine Learning", "Pyspark", "Random Forest", "streamlit"],
     demo: "https://singlevsdistributedml.streamlit.app/",
     github: "https://github.com/MichaelF102/ET2_NormalVsPyspark",
