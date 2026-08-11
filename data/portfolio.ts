@@ -388,6 +388,25 @@ export const Project: ProjectItem[] = [
     demo: "https://stockmarketfundamentals.streamlit.app/",
     github: "https://github.com/MichaelF102/Stock_Fundamentals",
   },
+  {
+    id: 21,
+    name: "Technical Analysis Terminal",
+    description:
+      "Interactive Technical Analysis Terminal for Equites",
+    tags: ["Python", "yfinance", "plotly", "pandas", "streamlit"],
+    demo: "https://technicalterminal.streamlit.app/",
+    github: "https://github.com/MichaelF102/Technical_Terminal",
+  },
+  {
+    id: 22,
+    name: "",
+    description:
+      "Benchmarking Single Node vs Distributed Processing",
+    tags: ["Python", "Machine Learning", "Pyspark", "Random Forest", "streamlit"],
+    demo: "https://singlevsdistributedml.streamlit.app/",
+    github: "https://github.com/MichaelF102/ET2_NormalVsPyspark",
+  },
+
 ];
 
 const categoryMapping: Record<number, string> = {
@@ -410,7 +429,9 @@ const categoryMapping: Record<number, string> = {
   17: "Data Science",
   18: "Data Analytics",
   19: "Data Science",
-  20: "Data Analytics",
+  20: "Quant Finance",
+  21: "Quant Finance",
+  22: "Data Engineering",
 };
 
 const colorPalette = ["#FFE135", "#4ECDC4", "#FF6B9D", "#95E06C", "#C77DFF", "#FF6B35"];
