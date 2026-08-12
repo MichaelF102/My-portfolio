@@ -92,15 +92,44 @@ export default function Projects() {
               }}
             >
               {/* Header card image area */}
-              <div style={{ position: 'relative', height: '170px', overflow: 'hidden', borderBottom: '3px solid #1a1a1a', background: project.color }}>
-                {/* Neobrutalist grid pattern */}
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  backgroundImage: 'linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)',
-                  backgroundSize: '20px 20px',
-                  opacity: 0.5,
-                }} />
+              <div style={{ position: 'relative', height: '180px', overflow: 'hidden', borderBottom: '3px solid #1a1a1a', background: project.color }}>
+                {/* Project Image */}
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top center',
+                      display: 'block',
+                    }}
+                  />
+                ) : (
+                  <>
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundImage: 'linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px',
+                      opacity: 0.5,
+                    }} />
+                    <div style={{
+                      position: 'absolute',
+                      inset: 0,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '4.2rem',
+                    }}>
+                      {project.category === 'Quant Finance' && '📈'}
+                      {project.category === 'Data Science' && '🧠'}
+                      {project.category === 'Data Analytics' && '📊'}
+                      {project.category === 'Data Engineering' && '⚙️'}
+                    </div>
+                  </>
+                )}
 
                 {/* Telemetry mark */}
                 <div style={{
@@ -109,32 +138,23 @@ export default function Projects() {
                   right: '0.6rem',
                   fontFamily: "'IBM Plex Mono', monospace",
                   fontSize: '0.62rem',
-                  color: 'rgba(0,0,0,0.5)',
+                  color: '#ffffff',
+                  background: '#1a1a1a',
+                  padding: '0.15rem 0.45rem',
+                  borderRadius: '3px',
+                  border: '1.5px solid #1a1a1a',
                   fontWeight: 700,
+                  zIndex: 2,
+                  boxShadow: '1.5px 1.5px 0 rgba(0,0,0,0.2)',
                 }}>
                   SYS_ID // 00{project.id}
-                </div>
-
-                {/* Center Emoji */}
-                <div style={{
-                  position: 'absolute',
-                  inset: 0,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '4.2rem',
-                }}>
-                  {project.category === 'Quant Finance' && '📈'}
-                  {project.category === 'Data Science' && '🧠'}
-                  {project.category === 'Data Analytics' && '📊'}
-                  {project.category === 'Data Engineering' && '⚙️'}
                 </div>
 
                 {/* Category badge */}
                 <div style={{
                   position: 'absolute',
-                  top: '0.75rem',
-                  left: '0.75rem',
+                  top: '0.6rem',
+                  left: '0.6rem',
                   background: '#1a1a1a',
                   color: project.color,
                   border: '2px solid #1a1a1a',
@@ -142,8 +162,10 @@ export default function Projects() {
                   fontFamily: "'IBM Plex Mono', monospace",
                   fontSize: '0.7rem',
                   fontWeight: 700,
-                  borderRadius: '2px',
+                  borderRadius: '3px',
                   letterSpacing: '0.05em',
+                  zIndex: 2,
+                  boxShadow: '2px 2px 0 rgba(0,0,0,0.2)',
                 }}>{project.category}</div>
               </div>
 

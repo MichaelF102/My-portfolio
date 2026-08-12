@@ -449,6 +449,7 @@ export const projectsData = Project.map((p, idx) => ({
   github: p.github,
   link: p.demo || p.github,
   color: colorPalette[idx % colorPalette.length],
+  image: `/images/projects/${p.id}.jpg`,
 }));
 
 export const socialLinks = [
