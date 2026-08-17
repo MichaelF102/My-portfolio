@@ -72,7 +72,8 @@ export default function ProjectsPage() {
                 lineHeight: 1.6,
               }}
             >
-              Note:If the Live Streamlit App Shows Error, it can Be Due to API Rate Limit Error. Please Clone the repository and run it on your local machine.
+              Note: Click on <span style={{ fontWeight: 700 }}>"Yes, get this app back up!"</span> if the app is inactive to see live demonstration.
+              If the Live Streamlit App Shows Error, it can Be Due to API Rate Limit Error. Please Clone the repository and run it on your local machine.
             </p>
           </div>
 
