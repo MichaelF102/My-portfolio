@@ -295,7 +295,7 @@ export const Project: ProjectItem[] = [
     description:
       "AlphaForge is an institutional-grade quantitative investment and research platform for factor-based equity research, portfolio optimization, historical strategy backtesting, and risk analytics.",
     tags: ["Python", "NumPy", "riskfolio-lib", "scipy", "plotly"],
-    demo: "https://github.com/MichaelF102/Alpha-Forage",
+    demo: "https://alpha-forage.streamlit.app/",
     github: "https://github.com/MichaelF102/Alpha-Forage",
   },
   {
