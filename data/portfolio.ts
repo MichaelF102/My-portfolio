@@ -406,6 +406,42 @@ export const Project: ProjectItem[] = [
     demo: "https://singlevsdistributedml.streamlit.app/",
     github: "https://github.com/MichaelF102/ET2_NormalVsPyspark",
   },
+  {
+    id: 23,
+    name: "Portfolio Optimization Using Reinforcement Learning",
+    description:
+      "Using Reinforcement Learning Algorithms to create an optimal portfolio for investors based on risk tolerance and investment horizon.",
+    tags: ["Python", "Reinforcement Learning", "Gymnasium", "Stable-Baseline3", "streamlit"],
+    demo: "https://rl-portfolio.streamlit.app/",
+    github: "https://github.com/MichaelF102/RL_Portfolio_Optimizer",
+  },
+  {
+    id: 24,
+    name: "Deep Reinforcement Learning Market-Making Agent",
+    description:
+      "An institutional-grade simulated market-making platform where continuous Deep Reinforcement Learning agents (SAC, PPO, TD3, and Residual RL) ",
+    tags: ["Python", "Reinforcement Learning", "Gymnasium", "Pytorch", "streamlit"],
+    demo: "https://drl-marketmakingagent.streamlit.app/",
+    github: "https://github.com/MichaelF102/DRL-MarketMakingAgent",
+  },
+  {
+    id: 25,
+    name: "Deep Reinforcement Learning Trading Arena",
+    description:
+      "Interactive platform for simulating and comparing advanced Deep Reinforcement Learning (DRL) trading agents.",
+    tags: ["Python", "Reinforcement Learning", "Gymnasium", "Pytorch", "streamlit"],
+    demo: "https://drltradingarena.streamlit.app/",
+    github: "https://github.com/MichaelF102/DRL-TradingArena",
+  },
+  {
+    id: 26,
+    name: "FMCG Sales Prediction using Pyspark",
+    description:
+      "Single-Node vs Distributed Machine Learning Benchmark (1M, 3M, 5M, 10M Records)",
+    tags: ["Python", "Machine Learning", "Pyspark", "AWS", "streamlit"],
+    demo: "https://fmcgspark.streamlit.app/",
+    github: "https://github.com/MichaelF102/FMCG_SPARK",
+  },
 
 ];
 
@@ -432,6 +468,10 @@ const categoryMapping: Record<number, string> = {
   20: "Quant Finance",
   21: "Quant Finance",
   22: "Data Engineering",
+  23: "Quant Finance",
+  24: "Quant Finance",
+  25: "Quant Finance",
+  26: "Data Engineering",
 };
 
 const colorPalette = ["#FFE135", "#4ECDC4", "#FF6B9D", "#95E06C", "#C77DFF", "#FF6B35"];
