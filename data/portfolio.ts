@@ -395,7 +395,7 @@ export const Project: ProjectItem[] = [
       "Interactive Technical Analysis Terminal for Equites",
     tags: ["Python", "yfinance", "plotly", "pandas", "streamlit"],
     demo: "https://technicalterminal.streamlit.app/",
-    github: "https://github.com/MichaelF102/Technical_Terminal",
+    github: "https://github.com/MichaelF102/Technical_Terminal-",
   },
   {
     id: 22,
