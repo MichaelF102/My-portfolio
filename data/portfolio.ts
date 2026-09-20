@@ -442,6 +442,15 @@ export const Project: ProjectItem[] = [
     demo: "https://fmcgspark.streamlit.app/",
     github: "https://github.com/MichaelF102/FMCG_SPARK",
   },
+  {
+    id: 27,
+    name: "Stock Market Analysis and Prediction using ML and Dl",
+    description:
+      "Stock Price Prediction using ML and DL Algorithms and comparing their performance",
+    tags: ["Python", "Machine Learning", "Deep Learning", "streamlit"],
+    demo: "https://stockpredictionmldl.streamlit.app/",
+    github: "https://github.com/MichaelF102/Stock_Market_Analysis_And_Prediction",
+  },
 
 ];
 
@@ -472,6 +481,7 @@ const categoryMapping: Record<number, string> = {
   24: "Quant Finance",
   25: "Quant Finance",
   26: "Data Engineering",
+  27: "Quant Finance",
 };
 
 const colorPalette = ["#FFE135", "#4ECDC4", "#FF6B9D", "#95E06C", "#C77DFF", "#FF6B35"];
